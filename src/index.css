@@ -1,0 +1,294 @@
+body {
+  background-color: white;
+  color: black;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app-container {
+  padding: 20px;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+.quote-card {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  width: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  justify-content: space-between;
+  height: 500px;
+  max-height: 500px;
+}
+
+.quote-card.flip {
+  transform: rotateY(180deg); /* Flip animation */
+}
+
+.quote-card .quote-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  overflow: hidden;
+  text-align: center;
+}
+
+.quote-card .quote-text-container {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  max-height: 400px;
+  /* Limiting max height for smaller screens */
+}
+
+.quote-card .anime-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.quote-card .quote-text {
+  font-style: italic;
+  margin: 10px 0;
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+.quote-card .anime-image-container {
+  margin-bottom: 10px;
+}
+
+.quote-card .anime-image {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: space-around;
+  gap: 10px;
+  margin-top: auto;
+}
+
+.btn {
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  transition: background-color 0.3s ease;
+}
+
+
+.like-btn.liked {
+  color: red !important;
+  /* Force the color change to red when liked */
+}
+
+.btn:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.dark-mode-toggle {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding: 10px;
+  font-size: 24px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  color: inherit;
+  z-index: 10;
+  transition: background-color 0.3s ease;
+}
+
+
+.dark-mode-toggle:hover {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Dark Mode styles */
+.quote-card.dark-mode {
+  background-color: #2a2b2c;
+  color: white;
+}
+
+.quote-card.dark-mode .quote-text {
+  color: #ecf0f1;
+}
+
+.quote-card.dark-mode .anime-title {
+  color: #ecf0f1;
+}
+
+.quote-card.dark-mode .btn {
+  color: white;
+}
+
+.quote-card.dark-mode .btn:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.quote-card.dark-mode .dark-mode-toggle:hover {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+
+.dark-mode-toggle:focus {
+  outline: none;
+}
+
+.dark-mode .quote-card {
+  background-color: #32363a;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Styles */
+
+/* Mobile screens (max-width: 480px) */
+@media (max-width: 480px) {
+  .app-container {
+    padding: 10px;
+    max-width: 100%;
+  }
+
+  .quote-card {
+    padding: 15px;
+    height: 300px;
+    max-height: 300px;
+  }
+
+  .quote-card .quote-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quote-card .anime-image {
+    width: 70px;
+    height: 70px;
+  }
+
+  .quote-card .anime-title {
+    font-size: 16px;
+  }
+
+  .quote-card .quote-text {
+    font-size: 14px;
+    line-height: 1.4;
+  }
+
+  .quote-card .quote-text-container {
+    max-height: 120px;
+    overflow-y: auto;
+    /* Enable scroll for long quotes */
+  }
+
+  .buttons-container {
+    flex-direction: column;
+    gap: 15px;
+    align-items: center;
+  }
+}
+
+/* Tablet screens (max-width: 768px) */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 15px;
+    max-width: 90%;
+  }
+
+  .quote-card {
+    padding: 18px;
+    height: 350px;
+    max-height: 350px;
+  }
+
+  .quote-card .quote-content {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .quote-card .anime-image {
+    width: 90px;
+    height: 90px;
+  }
+
+  .quote-card .anime-title {
+    font-size: 18px;
+  }
+
+  .quote-card .quote-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+
+  .quote-card .quote-text-container {
+    max-height: 150px;
+    overflow-y: auto;
+  }
+
+  .buttons-container {
+    flex-direction: row;
+    justify-content: center;
+  }
+}
+
+/* Desktop screens (min-width: 1024px) */
+@media (min-width: 1024px) {
+  .app-container {
+    padding: 20px;
+    max-width: 600px;
+  }
+
+  .quote-card {
+    padding: 20px;
+    height: 500px;
+    max-height: 500px;
+  }
+
+  .quote-card .quote-content {
+    flex-direction: column;
+  }
+
+  .quote-card .anime-image {
+    width: 100px;
+    height: 100px;
+  }
+
+  .quote-card .anime-title {
+    font-size: 20px;
+  }
+
+  .quote-card .quote-text {
+    font-size: 18px;
+  }
+
+  .quote-card .quote-text-container {
+    max-height: 400px;
+    overflow-y: auto;
+  }
+
+  .buttons-container {
+    justify-content: flex-start;
+  }
+}
