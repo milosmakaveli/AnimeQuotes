@@ -9,7 +9,7 @@ AnimeQuotes is a React.js web app that displays random quotes from various anime
 - AnimeChan API Integration: The app currently fetches quotes using the free AnimeChan API, which is limited to 20 requests per hour.
 
 # Demo
-
+https://github.com/user-attachments/assets/e3184132-a0cc-4de4-8d7b-0b2b4b04d7e1
 
 
 # Setup:
