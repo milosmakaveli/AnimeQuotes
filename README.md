@@ -4,7 +4,8 @@ AnimeQuotes is a React.js web app that displays random quotes from various anime
 
 # Features
 - Random Anime Quotes: Displays random quotes from various anime, along with the character who said each quote.
-- Dark/Light Mode: Toggle between dark and light modes, with settings that persist even after a browser refresh.
+- Like Quotes: Users can like quotes, with a like button.
+- Dark/Light Mode: Toggle between dark and light modes, with settings that persist even after a browser refresh (app currently utilizes local storage to remember last selected theme).
 - Quote Animation: Smooth animations when displaying a new random quote.
 - AnimeChan API Integration: The app currently fetches quotes using the free AnimeChan API, which is limited to 20 requests per hour.
 
