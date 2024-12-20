@@ -1,5 +1,5 @@
 # AnimeQuotes
-AnimeQuotes is a React.js web app that displays random quotes from various anime. The app relies on a simple backend server built with Express.js, which fetches both a random anime quote and an associated anime image. The app uses two APIs: AnimeChan for the quotes and Jikan for the anime images.
+AnimeQuotes is a React.js web app that displays random quotes from various anime. The app relies on a simple backend server built with Express.js, which fetches both a random anime quote and an associated anime image. The app uses two APIs: [AnimeChan](https://animechan.io/) for the quotes and [Jikan](https://jikan.moe/) for the anime images.
 
 
 # Features
