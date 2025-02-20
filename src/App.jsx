@@ -133,7 +133,7 @@ function App() {
             className="dark-mode-toggle"
             onClick={toggleDarkMode}
           >
-            {darkMode ? <FaMoon /> : <FaSun />}
+            {darkMode ? <FaSun /> : <FaMoon />}
 
           </button>
         </div>
